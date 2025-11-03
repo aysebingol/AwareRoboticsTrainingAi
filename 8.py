@@ -29,4 +29,4 @@ plt.show()
 #gorselleri kaydet
 cv2.imwrite('edges.png', edges)
 cv2.imwrite('corners.png', img_with_corners)
-print("görseller kaydedildi: 'edges.png' ve ''corners.png")
+print("görseller kaydedildi: 'edges.png' ve 'corners.png'")
