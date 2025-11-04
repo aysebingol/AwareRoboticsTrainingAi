@@ -7,7 +7,7 @@ config_path = "yolov3-face.cfg"
 net = cv2.dnn.readNetFromDarknet(config_path, weights_path)
 
 #Video veya resim kaynağı(kamera açılmıyor)
-video_path = "person.mp4"  
+video_path = "pers.mp4"  
 cap = cv2.VideoCapture(video_path)
 
 if not cap.isOpened():
