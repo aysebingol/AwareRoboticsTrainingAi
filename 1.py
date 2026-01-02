@@ -12,6 +12,7 @@ img = cv2.imread(input_image_name)
 if img is None:
     print(f"HATA: '{input_image_name}' dosyası bulunamadı ve okunamadı.")
 else:
+    //bu görüntüyü(img) bu isimle diske kaydet
     kayit_basarisi = cv2.imwrite(output_image_name,img)
 
 
