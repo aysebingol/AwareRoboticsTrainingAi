@@ -52,4 +52,3 @@ cv2.imwrite('erosion.png', erosion)
 cv2.imwrite('dilation.png', dilation)
 cv2.imwrite('opening.png', opening)
 
-print("Görseller kaydedildi: binary.png, erosion.png, dilation.png, opening.png")
