@@ -38,5 +38,3 @@ plt.axis('off')
 
 plt.show()
 
-cv2.imwrite('diff_visual.png', diff_norm)
-np.save('diff_array.npy', diff)
