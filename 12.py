@@ -1,23 +1,22 @@
 import cv2
 
-video_path = "test.mp4"  
-cap = cv2.VideoCapture(video_path)
+cap = cv2.VideoCapture(0)
 
 if not cap.isOpened():
-    print("Video açılamadı.")
+    print("Kamera açılamadı!")
     exit()
 
 while True:
-    ret, frame = cap.read()
+    ret, frame = cap.read()  
+
     if not ret:
-        print("Video bitti veya okunamadı.")
+        print("Kare okunamadı!")
         break
 
-    cv2.imshow("Kamera Simülasyonu", frame)
+    cv2.imshow("Kamera Goruntusu", frame)
 
-
-    if cv2.waitKey(25) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-cap.release()
+cap.release()      
 cv2.destroyAllWindows()
