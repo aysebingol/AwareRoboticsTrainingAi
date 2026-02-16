@@ -12,12 +12,12 @@ net = cv2.dnn.readNetFromDarknet(config_path, weights_path)
 cap = cv2.VideoCapture(0) #1 harivi kamera,0 bilgisayarın kamerası
 
 CONF_THRESHOLD = 0.5 #%50den emin değilse gösterme
-NMS_THRESHOLD = 0.4 #çakışan kutuları temizle
+NMS_THRESHOLD = 0.4 #çakışam kutuları temizle
 
 prev_time = 0 #fps saniyede kaç kare işleniyor,hesaplamak için önceki zamanı saklıyoruz
 
 
-while True: #kameradan süreki görüntüyü al
+while True: #kameradan sürekli görüntüyü al
     ret, frame = cap.read() #ret-görüntü geldimi,frame-kameradan gelen görüntü
     if not ret:
         break
@@ -39,7 +39,7 @@ while True: #kameradan süreki görüntüyü al
     outputs = net.forward(output_layers)
 
     boxes = [] #kutunun koordinatları
-    confidences = [] #güven skorları
+    confidences = [] #güven skkoarları
 
     
     for output in outputs:
@@ -49,7 +49,7 @@ while True: #kameradan süreki görüntüyü al
             class_id = np.argmax(scores)
             confidence = scores[class_id]
 
-            #sadece insanları seçiyoruz,cocoda 0 insan
+            #sadece insanları seçiyoruz,cocoda 0 insan(person)
             if confidence > CONF_THRESHOLD and class_id == 0:
                 #kutu koordinatlarını hesaplama
                 box = detection[0:4] * np.array([W, H, W, H])
