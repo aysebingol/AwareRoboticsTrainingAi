@@ -1,6 +1,0 @@
-train: ../my_data 
-val: ../my_data
-
-# Sınıf Bilgileri
-nc: 4 
-names: ['kalem', 'silgi', 'makas', 'bant']
