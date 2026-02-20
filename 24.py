@@ -33,7 +33,7 @@ class DepthEstimationApp(QWidget):
 
         layout = QVBoxLayout()
         
-        self.btn_sec = QPushButton('🖼️ Resim Seç ve Derinlik Tahmin Et')
+        self.btn_sec = QPushButton('Resim Seç ve Derinlik Tahmin Et')
         self.btn_sec.setFixedHeight(50)
         self.btn_sec.setStyleSheet("background-color: #8e44ad; color: white; font-weight: bold; border-radius: 10px;")
         self.btn_sec.clicked.connect(self.analiz_et)
